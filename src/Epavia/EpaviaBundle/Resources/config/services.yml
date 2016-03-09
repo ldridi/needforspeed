@@ -1,0 +1,4 @@
+services:
+#    epavia.example:
+#        class: Epavia\EpaviaBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

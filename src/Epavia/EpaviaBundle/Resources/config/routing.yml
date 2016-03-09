@@ -1,0 +1,3 @@
+epavia_homepage:
+    path:     /
+    defaults: { _controller: EpaviaBundle:Default:index }
