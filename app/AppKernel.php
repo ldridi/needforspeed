@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Epavia\EpaviaBundle\EpaviaBundle(),
             new Entreprise\EntrepriseBundle\EntrepriseBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Utilisateur\UtilisateurBundle\UtilisateurBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

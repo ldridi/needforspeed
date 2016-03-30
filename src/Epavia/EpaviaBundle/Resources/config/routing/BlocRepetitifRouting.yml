@@ -1,0 +1,3 @@
+profileEntreprise:
+    path:     /profileEntreprise
+    defaults: { _controller: EpaviaBundle:BlocRepetitif:profileEntreprise }

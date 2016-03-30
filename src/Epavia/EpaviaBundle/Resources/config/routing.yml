@@ -1,11 +1,5 @@
-epavia_homepage:
-    path:     /
-    defaults: { _controller: EpaviaBundle:Default:index }
+epavia:
+    resource: "@EpaviaBundle/Resources/config/routing/EpaviaRouting.yml"
 
-epavia_contactus:
-    path:     /contactus
-    defaults: { _controller: EpaviaBundle:Page:contact }
-
-epavia_aboutus:
-    path:     /aboutus
-    defaults: { _controller: EpaviaBundle:Page:about }
+blocRepetitif:
+    resource: "@EpaviaBundle/Resources/config/routing/BlocRepetitifRouting.yml"
