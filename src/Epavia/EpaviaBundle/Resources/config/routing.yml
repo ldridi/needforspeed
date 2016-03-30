@@ -1,3 +1,11 @@
 epavia_homepage:
     path:     /
     defaults: { _controller: EpaviaBundle:Default:index }
+
+epavia_contactus:
+    path:     /contactus
+    defaults: { _controller: EpaviaBundle:Page:contact }
+
+epavia_aboutus:
+    path:     /aboutus
+    defaults: { _controller: EpaviaBundle:Page:about }

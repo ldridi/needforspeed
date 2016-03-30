@@ -1,0 +1,27 @@
+entreprise_homepage:
+    path:     /entreprise
+    defaults: { _controller: EntrepriseBundle:Default:index }
+
+entreprise_profile:
+    path:     /profile
+    defaults: { _controller: EntrepriseBundle:Entreprise:profile }
+
+entreprise_produit:
+    path:     /produit
+    defaults: { _controller: EntrepriseBundle:Entreprise:produit }
+
+entreprise_portfolio:
+    path:     /portfolio
+    defaults: { _controller: EntrepriseBundle:Entreprise:portfolio }
+
+entreprise_events:
+    path:     /events
+    defaults: { _controller: EntrepriseBundle:Entreprise:events }
+
+entreprise_blog:
+    path:     /blog
+    defaults: { _controller: EntrepriseBundle:Entreprise:blog }
+
+entreprise_contact:
+    path:     /contact
+    defaults: { _controller: EntrepriseBundle:Entreprise:contact }

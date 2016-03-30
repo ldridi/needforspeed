@@ -97,6 +97,29 @@
             </div>
             <!-- END .HEADER-TOP-BAR -->
 
+            <!-- HEADER SEARCH SECTION -->
+            <div class="header-search fixed-height">
+                 <!-- END .header-search-bar -->
+
+                <div class="page-heading about-us-heading">
+                    <span></span> <!-- for dark-overlay on the bg -->
+
+                    <div class="container">
+                        <h1>About <span>Us</span></h1>
+
+                        <div class="heading-link">
+                            <a href="#">Home</a>
+
+                            <i>/</i>
+
+                            <a href="#">About Us</a>
+                        </div>
+
+                    </div> <!-- END .container-->
+                </div> <!-- END .about-us-heading -->
+
+            </div> <!-- END .SEARCH and slide-section -->
+
 
             <div class="header-nav-bar">
                 <div class="container">
@@ -107,7 +130,7 @@
                         <ul class="primary-nav list-unstyled">
                             <li><a href="#">Home<i class="fa fa-angle-down"></i></a>
                                 <ul>
-                                    <li><a href="home-map-grid.html">Home-map(grid)</a></li>
+                                    <li><a href="ihome-map-grid.html">Home-map(grid)</a></li>
                                     <li><a href="home-map-list.html">Home-map(list)</a></li>
                                     <li><a href="index.html">Home slider(view-1)</a></li>
                                     <li><a href="home-category.html">Home slider(view-2)</a></li>
@@ -115,15 +138,15 @@
 
                             </li>
 
-                            <li class="bg-color"><a href="#">Company<i class="fa fa-angle-down"></i></a>
+                            <li class=""><a href="#">Company<i class="fa fa-angle-down"></i></a>
 
                                 <ul>
-                                    <li><a href="company-profile.html">Company(Profile)</a></li>
-                                    <li><a href="company-product.html">Company(Product)</a></li>
-                                    <li><a href="company-portfolio.html">Company(Portfolio)</a></li>
-                                    <li><a href="company-events.html">Company(Events)</a></li>
-                                    <li><a href="company-blog.html">Company(Blog)</a></li>
-                                    <li><a href="company-contact.html">Company(contact)</a></li>
+                                    <li><a href="{{ path('entreprise_profile') }}">Company(Profile)</a></li>
+                                    <li><a href="{{ path('entreprise_produit') }}">Company(Product)</a></li>
+                                    <li><a href="{{ path('entreprise_portfolio') }}">Company(Portfolio)</a></li>
+                                    <li><a href="{{ path('entreprise_events') }}">Company(Events)</a></li>
+                                    <li><a href="{{ path('entreprise_blog') }}">Company(Blog)</a></li>
+                                    <li><a href="{{ path('entreprise_contact') }}">Company(contact)</a></li>
                                 </ul>
 
                             </li>
@@ -142,53 +165,12 @@
                             </li>
 
                             <li><a href="price-listing.html">Price Listing</a></li>
-                            <li><a href="about-us.html">About Us</a></li>
-                            <li><a href="contact-us.html">Contact Us</a></li>
+                            <li class="bg-color"><a href="{{ path('epavia_aboutus') }}">About Us</a></li>
+                            <li><a href="{{ path('epavia_contactus') }}">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div> <!-- end .container -->
-            </div>
-            <!-- HEADER SEARCH SECTION -->
-            <div class="header-search company-profile-height">
-                 <!-- END .header-search-bar -->
-
-                <div class="company-heading-view">
-                    <div class="container">
-                        <div class="button-content">
-                            <button class="general-view-btn active"><i class="fa fa-newspaper-o"></i><span>General</span></button>
-                            <button class="map-view-btn"><i class="fa fa-map-marker"></i><span>Map</span></button>
-                            <button class="male-view-btn"><i class="fa fa-male"></i><span>Street</span></button>
-                        </div>
-                    </div>
-
-                    <div class="company-slider-content">
-
-                        <div class="general-view">
-                            <span></span> <!-- for dark-overlay on the bg -->
-                            <div class="container">
-
-                                <div class="logo-image">
-                                    <img src="{{ asset('img/content/company-logo.jpg') }}" alt="">
-                                </div>
-
-                                <h1>Company name</h1>
-                            </div>
-                        </div> <!-- END .general-view -->
-
-                        <div class="company-map-view">
-                            <div id="company_map_canvas"></div>
-                        </div> <!-- END .company-map-view -->
-
-                        <div class="company-map-street">
-                            <div id="company_map_canvas_street"></div>
-                        </div> <!-- END .company-map-view-street -->
-
-                    </div> <!-- END .company-slider-content -->
-
-                </div> <!-- END .about-us-heading -->
-
-            </div> <!-- END .SEARCH and slide-section -->
- <!-- end .header-nav-bar -->
+            </div> <!-- end .header-nav-bar -->
         </header>
         {% block body %}{% endblock %}
         <footer id="footer">
@@ -202,7 +184,7 @@
                                 <h3>About Globo</h3>
 
                                 <div class="footer-logo">
-                                    <a href="#"><img src="{{ asset('img/footer_logo.png') }}" alt=""></a>
+                                    <a href="#"><img src="img/footer_logo.png" alt=""></a>
                                     <span></span> <!-- This content for overlay effect -->
                                 </div>
 
@@ -217,7 +199,7 @@
 
                             <div class="latest-post clearfix">
                                 <div class="post-image">
-                                    <img src="{{ asset('img/content/latest_post_1.jpg') }}" alt="">
+                                    <img src="img/content/latest_post_1.jpg" alt="">
 
                                     <p><span>12</span>Sep</p>
                                 </div>
@@ -229,7 +211,7 @@
 
                             <div class="latest-post clearfix">
                                 <div class="post-image">
-                                    <img src="{{ asset('img/content/latest_post_2.jpg') }}" alt="">
+                                    <img src="img/content/latest_post_2.jpg" alt="">
 
                                     <p><span>09</span>Sep</p>
                                 </div>
