@@ -29,7 +29,7 @@ class Entreprise extends BaseUser
     /**
      * @ORM\ManyToMany(targetEntity="Epavia\EpaviaBundle\Entity\Secteur", cascade={"persist"})
      */
-    private $interet;
+    private $secteur;
 
     /**
      * @var string
@@ -509,38 +509,5 @@ class Entreprise extends BaseUser
     public function getWebEntreprise()
     {
         return $this->webEntreprise;
-    }
-
-    /**
-     * Add interet
-     *
-     * @param \Epavia\EpaviaBundle\Entity\Secteur $interet
-     * @return Entreprise
-     */
-    public function addInteret(\Epavia\EpaviaBundle\Entity\Secteur $interet)
-    {
-        $this->interet[] = $interet;
-
-        return $this;
-    }
-
-    /**
-     * Remove interet
-     *
-     * @param \Epavia\EpaviaBundle\Entity\Secteur $interet
-     */
-    public function removeInteret(\Epavia\EpaviaBundle\Entity\Secteur $interet)
-    {
-        $this->interet->removeElement($interet);
-    }
-
-    /**
-     * Get interet
-     *
-     * @return \Doctrine\Common\Collections\Collection 
-     */
-    public function getInteret()
-    {
-        return $this->interet;
     }
 }
