@@ -67,27 +67,4 @@ class Secteur
     {
         return $this->nomSecteur;
     }
-
-    /**
-     * Set categorie
-     *
-     * @param \Epavia\EpaviaBundle\Entity\Categorie $categorie
-     * @return Secteur
-     */
-    public function setCategorie(\Epavia\EpaviaBundle\Entity\Categorie $categorie)
-    {
-        $this->categorie = $categorie;
-
-        return $this;
-    }
-
-    /**
-     * Get categorie
-     *
-     * @return \Epavia\EpaviaBundle\Entity\Categorie 
-     */
-    public function getCategorie()
-    {
-        return $this->categorie;
-    }
 }
