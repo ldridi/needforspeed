@@ -2,7 +2,7 @@
 
 namespace Entreprise\EntrepriseBundle\Entity;
 
-use FOS\UserBundle\Entity\User as BaseUser;
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -34,112 +34,105 @@ class Entreprise extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="raison_social_entreprise", type="string", length=255)
+     * @ORM\Column(name="raison_social_entreprise", type="string", length=255,nullable=true)
      */
     private $raisonSocialEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="denomination_entreprise", type="string", length=255)
+     * @ORM\Column(name="denomination_entreprise", type="string", length=255,nullable=true)
      */
     private $denominationEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="presentation_entreprise", type="text")
+     * @ORM\Column(name="presentation_entreprise", type="text",nullable=true)
      */
     private $presentationEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="adresse_entreprise", type="string", length=255)
+     * @ORM\Column(name="adresse_entreprise", type="string", length=255,nullable=true)
      */
     private $adresseEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="codepostale_entreprise", type="string", length=255)
+     * @ORM\Column(name="codepostale_entreprise", type="string", length=255,nullable=true)
      */
     private $codepostaleEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ville_entreprise", type="string", length=255)
+     * @ORM\Column(name="ville_entreprise", type="string", length=255,nullable=true)
      */
     private $villeEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="longitude_entreprise", type="string", length=255)
+     * @ORM\Column(name="longitude_entreprise", type="string", length=255,nullable=true)
      */
     private $longitudeEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="latitude_entreprise", type="string", length=255)
+     * @ORM\Column(name="latitude_entreprise", type="string", length=255,nullable=true)
      */
     private $latitudeEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="registre_commerce_entreprise", type="string", length=255)
+     * @ORM\Column(name="registre_commerce_entreprise", type="string", length=255,nullable=true)
      */
     private $registreCommerceEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="date_creation_entreprise", type="string", length=255)
+     * @ORM\Column(name="date_creation_entreprise", type="string", length=255,nullable=true)
      */
     private $dateCreationEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="effectif_entreprise", type="string", length=255)
+     * @ORM\Column(name="effectif_entreprise", type="string", length=255,nullable=true)
      */
     private $effectifEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="capital_social_entreprise", type="string", length=255)
+     * @ORM\Column(name="capital_social_entreprise", type="string", length=255,nullable=true)
      */
     private $capitalSocialEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="fax_entreprise", type="string", length=255)
+     * @ORM\Column(name="fax_entreprise", type="string", length=255,nullable=true)
      */
     private $faxEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="mobile_entreprise", type="string", length=255)
+     * @ORM\Column(name="mobile_entreprise", type="string", length=255,nullable=true)
      */
     private $mobileEntreprise;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="email_entreprise", type="string", length=255)
-     */
-    private $emailEntreprise;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="web_entreprise", type="string", length=255)
+     * @ORM\Column(name="web_entreprise", type="string", length=255,nullable=true)
      */
     private $webEntreprise;
 
@@ -509,5 +502,38 @@ class Entreprise extends BaseUser
     public function getWebEntreprise()
     {
         return $this->webEntreprise;
+    }
+
+    /**
+     * Add secteur
+     *
+     * @param \Epavia\EpaviaBundle\Entity\Secteur $secteur
+     * @return Entreprise
+     */
+    public function addSecteur(\Epavia\EpaviaBundle\Entity\Secteur $secteur)
+    {
+        $this->secteur[] = $secteur;
+
+        return $this;
+    }
+
+    /**
+     * Remove secteur
+     *
+     * @param \Epavia\EpaviaBundle\Entity\Secteur $secteur
+     */
+    public function removeSecteur(\Epavia\EpaviaBundle\Entity\Secteur $secteur)
+    {
+        $this->secteur->removeElement($secteur);
+    }
+
+    /**
+     * Get secteur
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getSecteur()
+    {
+        return $this->secteur;
     }
 }

@@ -35,6 +35,10 @@ fos_user:
     firewall_name: main
     user_class: Entreprise\EntrepriseBundle\Entity\Entreprise
 
+    registration:
+        form:
+            type: Entreprise\EntrepriseBundle\Form\Type\RegistrationFormType
+
 # Twig Configuration
 twig:
     debug:            "%kernel.debug%"
